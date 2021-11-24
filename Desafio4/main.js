@@ -1,7 +1,7 @@
 const productos = require('./contenedor.js')
 const express = require('express')
 const app = express()
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT)
 
 app.get('/productos', (req, res) => {
     let listaProductos = productos.getAllObjects()
