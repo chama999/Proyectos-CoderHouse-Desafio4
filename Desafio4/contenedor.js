@@ -125,4 +125,3 @@ class Contenedor {
 
 exports.getObjectByIdAsyncAwait = getObjectByIdAsyncAwait;
 exports.getAllObjects = newProductos.getAllObjects;
-
