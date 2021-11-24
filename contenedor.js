@@ -1,6 +1,8 @@
-const dir= __dirname + '\\Archivos\\'
-const archivo='productos.json'
 const fs=require('fs')
+const path=require('path')
+const dir=path.normalize(__dirname + '\\Archivos\\')
+const archivo='productos.json'
+
 
 class Contenedor {
     constructor(nombre, descripcion, precio) {
