@@ -4,7 +4,7 @@ const app = express()
 app.listen(process.env.PORT || 3000)
 
 app.get('/', (req, res) => {
-    res.send('<h2>Hola, ingrese a /productos para acceder a todos los productos o /productoRandom para obtener un producto aleatorio</h2>')
+    res.send('<h2>Hola, ingrese a <a href="/productos"> /productos </a> para acceder a todos los productos o <a href="/productoRandom"> /productoRandom </a> para obtener un producto aleatorio</h2>')
 })
 app.get('/productos', (req, res) => {
     let listaProductos = productos.getAllObjects()
