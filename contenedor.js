@@ -1,6 +1,6 @@
 const fs=require('fs')
 const path=require('path')
-const dir=path.normalize(__dirname + '\\Archivos\\')
+const dir=path.normalize(__dirname + "/\\Archivos/\\")
 const archivo='productos.json'
 
 
@@ -19,15 +19,15 @@ class Contenedor {
     //create file if not exist
     createFile() {
         if (!fs.existsSync(dir)) {
-            console.log('Carpeta Archivos no existe, procedemos a crearla');
+            console.log(`Carpeta Archivos no existe ${dir}, procedemos a crearla`);
             fs.mkdirSync(dir);
         }
         if (!fs.existsSync(dir+archivo)) {
-            console.log('Archivo productos.json no existe, procedemos a crearlo');
+            console.log(`Archivo productos.json no existe en ${dir}${archivo}, procedemos a crearlo`);
             fs.writeFileSync(dir+archivo, '[]');
         }
         if (fs.existsSync(dir+archivo)){
-            console.log('Archivo existente, procedemos a limpiar');
+            console.log(`Archivo existente ${dir}${archivo}, procedemos a limpiar`);
             this.clearFile();
         }
     }
